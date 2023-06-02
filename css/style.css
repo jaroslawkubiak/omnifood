@@ -6,14 +6,19 @@
 
 - FONT WEIGHTS:
 Default: 400
+Medium: 500
+Semi-bold: 600
+bold: 700
 
 - LINE HEIGHTS
 Default: 1
+Small: 1.05
+Paragraph default: 1.6
 
 --- 02 COLORS
 - Primary: #e67e22
 - Tints: #fdf2e9
-- Shades: 
+- Shades:  #cf711f
 - Accents: 
 - Greys: 
 #555
@@ -22,13 +27,20 @@ Default: 1
 --- 05 SHADOWS
 
 --- 06 BORDER-RADIUS
+Default: 9px
 
 --- 07 WHITESPACE
 - SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 */
-
+:root {
+  --primary-color: #e67e22;
+  --primary-light-color: #fdf2e9;
+  --primary-dark-color: #cf711f;
+  --light-text-color: #555;
+  --dark-text-color: #333;
+}
 * {
   padding: 0;
   margin: 0;
@@ -45,18 +57,9 @@ body {
   color: #555;
 }
 
-.section-hero {
-  background-color: #fdf2e9;
-  padding: 9.6rem 1rem;
-}
-.hero {
-  max-width: 130rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 9.6rem;
-}
+/**********************/
+/* GENERAL COMPONENTS */
+/**********************/
 .heading-primary {
   font-size: 5.2rem;
   line-height: 1.05;
@@ -64,13 +67,8 @@ body {
   letter-spacing: -0.5px;
   margin-bottom: 3.2rem;
 }
-.hero-description {
-  font-size: 2rem;
-  line-height: 1.6;
-  margin-bottom: 4.8rem;
-}
-.hero-img {
-  width: 100%;
+.margin-right-sm {
+  margin-right: 1.6rem !important;
 }
 .btn:link,
 .btn:visited {
@@ -83,17 +81,14 @@ body {
   border-radius: 9px;
   transition: background-color 300ms;
 }
-
 .btn--full:link,
 .btn--full:visited {
-  background-color: #e67e22;
+  background-color: var(--primary-color);
 }
-
 .btn--full:hover,
 .btn--full:active {
-  background-color: #b8651b;
+  background-color: var(--primary-dark-color);
 }
-
 .btn--outline:link,
 .btn--outline:visited {
   background-color: #fff;
@@ -101,22 +96,93 @@ body {
 }
 .btn--outline:hover,
 .btn--outline:active {
-  background-color: #fdf2e9;
-  /* border: 3px solid white; */
+  background-color: var(--primary-light-color);
   box-shadow: inset 0 0 0 3px #fff;
 }
 
-.margin-right-sm {
-  margin-right: 1.6rem !important;
+/******************/
+/* HEADER SECTION */
+/******************/
+.logo {
+  height: 2.2rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-light-color);
+  height: 9.6rem;
+  padding: 0 4.8rem;
 }
 
+/**************/
+/* NAVIGATION */
+/**************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--dark-text-color);
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 300ms;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: var(--primary-dark-color);
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  background-color: var(--primary-color);
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+}
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+
+  background-color: var(--primary-dark-color);
+
+}
+
+/****************/
+/* HERO SECTION */
+/****************/
+.section-hero {
+  background-color: var(--primary-light-color);
+  padding: 4.8rem 0 9.6rem 0;
+}
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 9.6rem;
+}
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+.hero-img {
+  width: 100%;
+}
 .delivered-meals {
   display: flex;
   margin-top: 8rem;
   align-items: center;
   gap: 1.6rem;
 }
-
 .delivered-imgs {
   display: flex;
 }
@@ -125,17 +191,16 @@ body {
   width: 4.8rem;
   border-radius: 50%;
   margin-right: -1.6rem;
-  border: 3px solid #fdf2e9;
+  border: 3px solid var(--primary-light-color);
 }
 .delivered-imgs img:last-child {
-margin: 0;
+  margin: 0;
 }
-.delivered-text{
+.delivered-text {
   font-size: 1.8rem;
   font-weight: 600;
 }
-
-.delivered-text span{
- color: #b8651b;
- font-weight: 700;
+.delivered-text span {
+  color: var(--primary-dark-color);
+  font-weight: 700;
 }
