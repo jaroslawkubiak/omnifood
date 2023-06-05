@@ -400,18 +400,16 @@
   text-align: center;
 }
 /***************/
-/* CTS SECTION */
+/* CTA SECTION */
 /***************/
 .section-cta {
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 12.8rem;
 }
-
 .cta {
   display: grid;
   grid-template-columns: 2fr 1fr;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
-
   overflow: hidden;
   background-image: linear-gradient(to right bottom, #eb984e, var(--primary-color));
 }
@@ -428,7 +426,6 @@
   color: inherit;
   margin-bottom: 3.2rem;
 }
-
 .cta-image-box {
   background-image: linear-gradient(
       to right bottom,
@@ -439,21 +436,19 @@
   background-size: cover;
   background-position: center;
 }
-
 .cta-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3.2rem 2.4rem;
 }
-
 .cta-form label {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
 }
-
-.cta-form input, .cta-form select {
+.cta-form input,
+.cta-form select {
   width: 100%;
   padding: 1.2rem;
   font-size: 1.8rem;
@@ -464,12 +459,74 @@
   border-radius: 9px;
   box-shadow: 0 1px 2px rgb(0, 0, 0, 0.1);
 }
-
 .cta-form input::placeholder {
   color: #aaa;
 }
-
 .cta-form *:focus {
   outline: none;
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+/******************/
+/* FOOTER SECTION */
+/******************/
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+.grid-footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+  justify-content: space-around;
+}
+.social-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.copyright {
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.6;
+  margin-top: auto;
+}
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4.8rem;
+}
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.contacts p {
+  margin-bottom: 2.4rem;
+}
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 300ms;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }
