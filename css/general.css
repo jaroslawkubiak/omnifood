@@ -64,12 +64,16 @@ Medium: 11px
 }
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 body {
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  /* to działa tylko gdy nie istnieje żaden element w pozycji absolute do body */
+  overflow-x: hidden;
 }
 /**********************/
 /* GENERAL COMPONENTS */
@@ -176,7 +180,7 @@ body {
 
 .btn--form {
   color: var(--primary-light-color);
-  background-color: #45260a; 
+  background-color: #45260a;
   align-self: end;
   padding: 1.2rem;
   transition: all 300ms;
