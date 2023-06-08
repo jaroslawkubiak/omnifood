@@ -120,7 +120,8 @@ NOT USE REM to define media queries
   }
 
   .main-nav {
-    background-color: rgb(255, 255, 255, 0.95);
+    background-color: rgb(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
     position: absolute;
     top: 0;
     left: 0;

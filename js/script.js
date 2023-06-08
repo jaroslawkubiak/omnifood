@@ -9,7 +9,7 @@ btnNav.addEventListener("click", () => {
 });
 
 ////////////////////////////////////////////////
-// smooth scrilling animation
+// smooth scrolling animation
 
 const allLinks = document.querySelectorAll("a:link");
 
