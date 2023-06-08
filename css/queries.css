@@ -116,6 +116,7 @@ NOT USE REM to define media queries
   /* mobile nav */
   .btn-mobile-nav {
     display: block;
+    z-index: 999;
   }
 
   .main-nav {
